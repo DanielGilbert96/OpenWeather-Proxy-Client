@@ -8,6 +8,7 @@ import javax.swing.*;
 public class GetClient {
 
     public static void main(String[] args) {
+        
         JFrame frame = new JFrame("Enter The City");
         String city = JOptionPane.showInputDialog(frame, "What's the city?");
         int port = 49000;
