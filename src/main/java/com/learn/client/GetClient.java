@@ -8,21 +8,22 @@ import javax.swing.*;
 public class GetClient {
 
     public static void main(String[] args) {
-        //Input for Client to choose the city
-        JFrame frame = new JFrame("What City?");
-        String city = JOptionPane.showInputDialog(frame, "What City?");
-        //Setting the port number
+        // Input for client to choose city
+        JFrame frame = new JFrame("Enter The City");
+        String city = JOptionPane.showInputDialog(frame, "What's the city?");
+		// Setting the port
         int port = 49000;
-        //Url
+		// Setting Url
         String getUrl = "http://localhost:" + port + "/api/weather/city";
-        //creating client and sending get request to specified url
+        
+		//Creating the client and sending GET request
         Client client = Client.create();
         WebResource target = client.resource(getUrl);
 
         ClientResponse response = target
                 .queryParam("city", city)
                 .get(ClientResponse.class);
-        //Output for response of the get request
+        // Response from get request
         System.out.println(response.getEntity(String.class));
     }
 }
