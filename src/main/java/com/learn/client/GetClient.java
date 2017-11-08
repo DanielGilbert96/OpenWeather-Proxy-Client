@@ -15,6 +15,7 @@ public class GetClient {
         int port = 49000;
 		// Setting Url
         String getUrl = "http://localhost:" + port + "/api/weather/city";
+    
         
 		
         Client client = Client.create();
