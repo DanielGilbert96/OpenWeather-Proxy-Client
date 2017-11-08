@@ -16,13 +16,7 @@ public class GetClient {
 		// Setting Url
         String getUrl = "http://localhost:" + port + "/api/weather/city";
         
-		//Creating the client and sending GET request
-        
-        JFrame frame = new JFrame("Enter The City");
-        String city = JOptionPane.showInputDialog(frame, "What's the city?");
-        int port = 49000;
-        String getUrl = "http://localhost:" + port + "/api/weather/city";
-        
+		
         Client client = Client.create();
         WebResource target = client.resource(getUrl);
 
